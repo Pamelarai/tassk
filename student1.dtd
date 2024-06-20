@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students[
+   <!ELEMENT students (student+)>
+   <!ELEMENT student (name, address+, phone, website)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT address (#PCDATA)>
+   <!ATTLIST address type (permanent|temporary) #REQUIRED>
+   <!ELEMENT phone (#PCDATA)>
+   <!ATTLIST phone
+         length CDATA #FIXED "10">
+   <!ELEMENT website (#PCDATA)>
+]>
+<students>
+    <student>
+        <name>Pamela Rai</name>
+        <address type="permanent">Japan</address>
+        <address type="temporary">Nepal</address>
+        <phone>9811330200</phone>
+        <website>https://www.w3schools.com/xml/xml_dtd_examples.asp</website>
+    </student>
+    <student>
+        <name>Alina Acharya</name>
+        <address type="permanent">Nepal</address>
+        <address type="temporary">India</address>
+        <phone>9819311200</phone>
+        <website>https://www.w3schools.com/xml/xml_dtd_examples.asp</website>
+    </student>
+</students>
