@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+<!ELEMENT books (book+)>
+<!ELEMENT book (title?, isbn+, (zipcode | author), publish*)>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+          name CDATA #IMPLIED>
+
+<!ELEMENT isbn (#PCDATA)>
+<!ATTLIST isbn
+          no CDATA #REQUIRED>
+
+<!ELEMENT zipcode (#PCDATA)>
+<!ATTLIST zipcode
+          Zname CDATA "232232323">
+
+<!ELEMENT author (#PCDATA)>
+
+<!ELEMENT publish (#PCDATA)>
+<!ATTLIST publish
+          year CDATA #FIXED "1995">
+]>
+<books>
+    <book>
+        <title name="Sample Book">The Great Gatsby</title>
+        <isbn no="1234567890">876-32-11332-22</isbn>
+        <isbn no="0987654321">876-7-3-82837-7</isbn>
+        <zipcode Zname="123456789">12345</zipcode>
+        <publish>Scholastic</publish>
+        <publish>DAW Books</publish>
+    </book>
+    <book>
+        <isbn no="755654656">876-2-33-32342-8</isbn>
+        <author>Hooleen Cover</author>
+        <publish>Pearson</publish>
+    </book>
+</books>
+
