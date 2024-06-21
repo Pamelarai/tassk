@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [
+<!ELEMENT library (book+, member+, loan*)>
+<!ELEMENT book (title, author+, publicationYear, genre)>
+<!ELEMENT author (name)>
+<!ELEMENT member (name, email, address)>
+<!ELEMENT loan (bookID, memberID, loanDate, returnDate)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT publicationYear (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT bookID (#PCDATA)>
+<!ELEMENT memberID (#PCDATA)>
+<!ELEMENT loanDate (#PCDATA)>
+<!ELEMENT returnDate (#PCDATA)>
+
+<!ATTLIST book
+          id ID #REQUIRED>
+
+<!ATTLIST member
+          id ID #REQUIRED>
+
+<!ATTLIST loan
+          id ID #REQUIRED>
+]>
+
+  <library>
+    <book id="b001">
+        <title>Romeoandjuilet</title>
+        <author>
+            <name>William Shakespeare</name>
+        </author>
+        <publicationYear>1968</publicationYear>
+        <genre>Fiction</genre>
+    </book>
+    <book id="b002">
+        <title>Thepastandthepresent</title>
+        <author>
+            <name>Thomas Wood</name>
+        </author>
+        <publicationYear>1949</publicationYear>
+        <genre>Dystopian</genre>
+    </book>
+    <member id="m001">
+        <name>Olivia Rodrigo</name>
+        <email>olivia121@gmail.com</email>
+        <address>Losangeles</address>
+    </member>
+    <member id="m002">
+        <name>Lana Del Rey</name>
+        <email>lanadel465@gmail.com</email>
+        <address>NewYork</address>
+    </member>
+    <loan id="l001">
+        <bookID>b001</bookID>
+        <memberID>m001</memberID>
+        <loanDate>2024-06-01</loanDate>
+        <returnDate>2024-06-15</returnDate>
+    </loan>
+    <loan id="l002">
+        <bookID>b002</bookID>
+        <memberID>m002</memberID>
+        <loanDate>2024-06-05</loanDate>
+        <returnDate>2024-06-20</returnDate>
+    </loan>
+</library>
